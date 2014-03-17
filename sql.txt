@@ -4,45 +4,58 @@ Homework 3 - Code the Change
 Question #1:
 ============
 
+# I chose float(2,1) for GPA to limit GPA to a total 2 digit number with 1 digit to the right of
+the decimal point.
 
+CREATE TABLE students
+(
+id int,
+name varchar(255),
+birthday varchar(255),
+gpa float(2,1), 
+grad int,
+PRIMARY KEY (id)
+)
 
 Question #2:
 ============
 
-
+INSERT INTO students (name, birthday, gpa, grad) VALUES ("Anderson",  "1987-10-22", 3.9, 2014),
+														("Jones",     "1990-4-16",  2.4, 2016),
+														("Hernandez", "1989-8-12",  3.1, 2015),
+														("Chen",      "1990-2-4",   3.2, 2015);	
 
 Question #3:
 ============
 
-
+DELETE FROM students WHERE name = "Anderson";
 
 Question #4:
 ============
 
-
+SELECT * FROM students;
 
 Question #5:
 ============
 
-
+SELECT name,gpa FROM students
 
 Question #6:
 ============
 
-
+SELECT name,gpa FROM students WHERE GPA>3.0;
 
 Question #7:
 ============
 
-
+SELECT name,gpa FROM students WHERE GPA>3.0 ORDER BY gpa DESC;
 
 Question #8:
 ============
 
-
+UPDATE students SET gpa=2.6 WHERE name="Jones";
 
 Question #9:
 ============
 
-
-
+DROP TABLE Students
